@@ -1,4 +1,5 @@
 import requests
+import json
 
 
 #########################
@@ -594,5 +595,12 @@ def get_fee_overview_by_protocol(protocol_slug:str):
 # tvl = get_charts()
 # print(tvl)
 
-# data = get_protocols()
-# print(data)
+
+data = get_protocols()
+print("Data succesfully pulled!")
+s = json.dumps(data)
+
+writeFile =open('protocols_data.json', 'w')
+writeFile.write(s)
+writeFile.close()
+print("Data Succesfully saved to .json!")
