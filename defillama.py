@@ -598,7 +598,7 @@ def get_fee_overview_by_protocol(protocol_slug:str):
 
 data = get_protocols()
 print("Data succesfully pulled!")
-s = json.dumps(data)
+s = json.dumps(data, indent=4)
 
 writeFile =open('protocols_data.json', 'w')
 writeFile.write(s)
