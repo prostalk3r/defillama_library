@@ -8,9 +8,16 @@ prot_data = json.load(fh)
 
 print("Protocols count:", len(prot_data))
 
+count = 0
 for prot in prot_data:
-    print("Name:", prot["name"])
-    print("Name:", prot["url"])
-    print("###################")
+    count = count + 1
+    if count < 10:
+        print("Name:", prot["name"])
+        print("Name:", prot["url"])
+        print("###################")
+    else:
+        print("#### END ####")
+        break
+
 
 
